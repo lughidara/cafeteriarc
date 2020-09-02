@@ -1,0 +1,58 @@
+{
+  "cafeteria": [
+    {
+      "nombreProducto": "Cafe con leche",
+      "precioProducto": "100",
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "Medialuna x unidad",
+      "precioProducto": "50",
+      "categoria": "dulce",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Tostado de jamon y queso",
+      "precioProducto": "130",
+      "categoria": "salado",
+      "id": 3
+    },
+    {
+      "nombreProducto": "Tortilla",
+      "precioProducto": "20",
+      "categoria": "salado",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Factura con dulce de leche",
+      "precioProducto": "40",
+      "categoria": "dulce",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Leche chocolatada",
+      "precioProducto": "150",
+      "categoria": "bebida-fria",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Chocolatada caliente",
+      "precioProducto": "150",
+      "categoria": "bebida-caliente",
+      "id": 10
+    },
+    {
+      "nombreProducto": "Latte",
+      "precioProducto": "200",
+      "categoria": "bebida-caliente",
+      "id": 12
+    },
+    {
+      "nombreProducto": "Te",
+      "precioProducto": "80",
+      "categoria": "bebida-caliente",
+      "id": 13
+    }
+  ]
+}
