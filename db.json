@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "nombreProducto": "Medialuna x unidad",
-      "precioProducto": "50",
-      "categoria": "dulce",
-      "id": 2
-    },
-    {
       "nombreProducto": "Tostado de jamon y queso",
       "precioProducto": "130",
       "categoria": "salado",
@@ -25,7 +19,7 @@
       "id": 4
     },
     {
-      "nombreProducto": "Factura con dulce de leche",
+      "nombreProducto": "Factura con crema",
       "precioProducto": "40",
       "categoria": "dulce",
       "id": 5
@@ -37,15 +31,15 @@
       "id": 6
     },
     {
-      "nombreProducto": "Chocolatada caliente",
+      "nombreProducto": "Chocolate caliente",
       "precioProducto": "150",
       "categoria": "bebida-caliente",
       "id": 10
     },
     {
       "nombreProducto": "Latte",
-      "precioProducto": "200",
-      "categoria": "bebida-caliente",
+      "precioProducto": "180",
+      "categoria": "bebida-fria",
       "id": 12
     },
     {
@@ -53,6 +47,12 @@
       "precioProducto": "80",
       "categoria": "bebida-caliente",
       "id": 13
+    },
+    {
+      "nombreProducto": "Medialuna con jamon y queso",
+      "precioProducto": "100",
+      "categoria": "salado",
+      "id": 14
     }
   ]
 }

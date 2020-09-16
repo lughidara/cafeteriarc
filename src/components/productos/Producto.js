@@ -1,10 +1,16 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from "react-bootstrap";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+//{Link} usamos cdo queremos usar algo como una etiqueta a
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Producto = (props) => {
-    const eliminarProducto = (id) => {
+    const eliminarProducto = (_id) => {
         //el id es el que pasamos por parametro en la funcion eliminarProducto
         //console.log(id);
         Swal.fire({
@@ -21,7 +27,7 @@ const Producto = (props) => {
                 //aqui debemos eliminar el producto
                 try {
 
-                    const resultado = await fetch(`http://localhost:4000/cafeteria/${id}`, {
+                    const resultado = await fetch(`http://localhost:4000/api/cafeteria/${_id}`, {
                         method: "DELETE",
                         headers: {
                             'Content-Type': 'application/json'
@@ -65,8 +71,14 @@ const Producto = (props) => {
                 <span className="font-weight-bold"> ${props.producto.precioProducto}</span>
             </p>
             <div>
-                <Button variant="primary" className="mr-1">Editar</Button>
-                <Button variant="danger" type="button" onClick={() => eliminarProducto(props.producto.id)}>Eliminar</Button>
+                <Link
+                    className="btn btn-primary mr-1"
+                    to={`/productos/editar/${props.producto._id}`}
+                ><FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
+                </Link>
+                <Button variant="danger" type="button" onClick={() => eliminarProducto(props.producto._id)}>
+                    <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                </Button>
             </div>
         </ListGroup.Item>
     );

@@ -12,7 +12,6 @@ const AgregarProducto = (props) => {
     const [categoria, setCategoria] = useState("");
     const [error, setError] = useState(false);
 
-
     //funciones
     const seleccionarCategoria = (e) => {
         setCategoria(e.target.value);
@@ -51,7 +50,7 @@ const AgregarProducto = (props) => {
             };
             //operacion get es solo con el fetch con un solo parametro *en la mayoria de los casos, pero para modificar agregar y etc necesitamos otro parametro mas (que es un objeto, lo podemos poner directamente ahi dentro de los parentesis, o lo guardamos dentro de una const)
             //este objeto ya esta definido, podemos encotnrarlo en developer mozilla
-            const resultado = await fetch("http://localhost:4000/cafeteria", cabecera);
+            const resultado = await fetch("http://localhost:4000/api/cafeteria", cabecera);
             console.log(resultado); //status 201 es que se agrego efectivamente el producto
 
             //si la operacion fue exitosa
@@ -73,10 +72,14 @@ const AgregarProducto = (props) => {
             props.setRecargarProductos(true);
             //redireccionar a lista de productos
             props.history.push("/productos");
-            
+
         } catch (error) {
             console.log(error);
-
+            Swal.fire(
+                'Algo salio mal!',
+                'Vuelve a intentarlo',
+                'question'
+              )
         }
 
     }
@@ -100,7 +103,7 @@ const AgregarProducto = (props) => {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Precio *</Form.Label>
-                    <Form.Control type="text" placeholder="Ej: $150"
+                    <Form.Control type="text" placeholder="Ej: 150"
                         name="precio"
                         onChange={(e) => setPrecioProducto(e.target.value)} />
                 </Form.Group>
