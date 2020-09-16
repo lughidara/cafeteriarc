@@ -50,7 +50,7 @@ const AgregarProducto = (props) => {
             };
             //operacion get es solo con el fetch con un solo parametro *en la mayoria de los casos, pero para modificar agregar y etc necesitamos otro parametro mas (que es un objeto, lo podemos poner directamente ahi dentro de los parentesis, o lo guardamos dentro de una const)
             //este objeto ya esta definido, podemos encotnrarlo en developer mozilla
-            const resultado = await fetch("http://localhost:4000/api/cafeteria", cabecera);
+            const resultado = await fetch("https://cafeteriarc.herokuapp.com/api/cafeteria", cabecera);
             console.log(resultado); //status 201 es que se agrego efectivamente el producto
 
             //si la operacion fue exitosa

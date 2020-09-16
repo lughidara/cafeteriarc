@@ -37,7 +37,7 @@ function App() {
   const consultarAPI = async () => {
     try {
       //obtener lista de productos
-      const consulta = await fetch("http://localhost:4000/api/cafeteria"); //antes no teniamos el /api, eso cambia (ahora cn la BD)
+      const consulta = await fetch("https://cafeteriarc.herokuapp.com/api/cafeteria"); //antes no teniamos el /api, eso cambia (ahora cn la BD)
       //console.log(consulta);
       const respuesta = await consulta.json();
       console.log(respuesta);

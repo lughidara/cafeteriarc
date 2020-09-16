@@ -45,7 +45,7 @@ const EditarProducto = (props) => {
 
         //enviar los cambios a la API
         try{
-            const respuesta = await fetch(`http://localhost:4000/api/cafeteria/${props.productoSeleccionado._id}`, {
+            const respuesta = await fetch(`https://cafeteriarc.herokuapp.com/api/cafeteria/${props.productoSeleccionado._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
